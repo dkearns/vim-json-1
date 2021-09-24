@@ -22,6 +22,8 @@ setlocal nosmartindent
 setlocal indentexpr=GetJSONIndent()
 setlocal indentkeys=0{,0},0),0[,0],!^F,o,O,e
 
+let b:undo_indent = "setl inde< indk< si<"
+
 " Only define the function once.
 if exists("*GetJSONIndent")
   finish
